@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"> <!--para lidar com os caracteres diferentes do brasil-->
+         <link href="static/formincluir.css" rel="stylesheet" type="text/css">
+    <title>CADASTRO</title>
+    </head>
+
+    <body>
+
+     <div class="container" >
+    <a class="links" id="paracadastro"></a>
+    <a class="links" id="paralogin"></a>
+
+    <div class="content">
+      <!--FORMULÁRIO DE LOGIN-->
+      <div id="login">
+        <form method="post" action="/logiin"><!--preciso informar o action pra onde vai-->
+          <h1>Login</h1>
+          <p>
+            <label for="usuario">Usuario</label>
+            <input id="usuario" name="usuario" required="required" type="text" placeholder="ex. contato@htmlecsspro.com"/>
+          </p>
+
+          <p>
+            <label for="senha">Sua Senha</label>
+            <input id="senha" name="senha" required="required" type="password" placeholder="ex. senha" />
+          </p>
+
+          <p>
+            <input type="checkbox" name="manterlogado" id="manterlogado" value="" />
+            <label for="manterlogado">Manter-me logado</label>
+          </p>
+
+          <p>
+            <input type="submit" value="Entrar" />
+          </p>
+
+            <p class="voltar_inicio">
+            <a href="/">Voltar ao Inicio</a>
+          </p>
+
+          <p class="link">
+            Ainda não tem conta?
+            <a href="#paracadastro">Cadastre-se</a>
+          </p>
+        </form>
+      </div>
+
+      <!--FORMULÁRIO DE CADASTRO-->
+      <div id="cadastro">
+        <form method="post" action="/incluir">
+          <h1>Cadastro</h1>
+
+          <p>
+            <label for="nome_cad">Seu nome</label>
+            <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome se quiser sobre nome" />
+          </p>
+
+            <p>
+                 <label for="nascimento" > Data Nasc  </label>
+                 <input id="nascimento" name="nascimento" required="required" maxlength="50" type="date" />
+
+             </p>
+
+            <p>
+                  <label for="sexo" > Sexo  </label>
+                  <imput id="sexo"  required="required" ><select name="sexo" class="sexo">
+                  <option value="esc">Escolha a opçao</option>
+                  <option value="fem">Feminino</option>
+                  <option value="masc">Masculino</option>
+                  <option value="indef">Indefinido</option>
+                  <option value="n_listado">Nao está listado</option>
+                  </select></imput>
+               </p>
+
+                <p>
+                    <label for="tel" >Celular (WhatsApp)</label>
+                    <input id="tel" type="tel" name="tel" maxlength="15" placeholder="ex. (61) 55555-5555"required/>
+                </p>
+
+
+
+          <p>
+            <label for="email_cad">Seu e-mail</label>
+            <input id="email_cad" name="email" required="required" type="email" placeholder="contato@htmlecsspro.com"/>
+          </p>
+
+            <p>
+                   <label for="endereço" >endereço</label>
+                   <input id="endereço"  type="text" name="endereço" placeholder="ex.Rua quadra " maxlength="50" required/></td>
+                </p>
+
+            <p>
+                    <label for="cidade">Cidade</label>
+                    <input id="cidade" type="text" name="cidade"  placeholder="ex. Muriaé" required maxlength="50" /></td>
+                </p>
+
+            <p>
+                  <label for="estado">Estado</label>
+                  <input id="estado" type="text" name="estado" placeholder="ex. MInas gerais" maxlength="50" required />
+                </p>
+
+                <p>
+                    <label for="cep">Cep</label>
+                    <input id="cep" type="text" name="cep" maxlength="9" placeholder="ex. 70635-815" />
+                </p>
+
+                <p>
+                    <label for="rg">RG</label>
+                    <input id="rg"  type="text" name="rg" maxlength="20" placeholder=" xxxxxxxxxxxx" required/></td>
+                </p>
+
+                <p>
+                     <label for="cpf">CPF</label>
+                     <input  id="cpf" type="text" name="cpf"  maxlength="14" placeholder=" xxxxxxxxx"/>
+                     <!--- <input maxlength="2" name="cpf2" size="2"  placeholder=" xx" type="text"/>-->
+                </p>
+
+                <p>
+                 <label for="usuario">Escolha um usuario</label>
+                 <input id="usuario" type="text" name="usuario" required maxlength="20"  placeholder=" Joaquim"  />
+                </p>
+
+          <p>
+            <label for="senha_cad">Sua senha</label>
+            <input id="senha_cad" name="senha" required="required" type="password" placeholder="ex. 1234"/>
+          </p>
+
+                <p>
+                <label for="descriçao">Mande-nos uma mensagem</label>
+                <!--<input  id="descriçao" type="text" name="descriçao" placeholder="Oque você quer que saibamos ?"/>-->
+                    <textarea class="textarea" <input  id="descriçao" type="text" name="descriçao" placeholder="Oque você quer que saibamos ?"/></textarea>
+                </p>
+
+          <p>
+            <input type="submit" value="Cadastrar"/>
+          </p>
+
+          <p class="voltar_inicio">
+            <a href="/">Voltar ao Inicio</a>
+          </p>
+
+          <p class="link">
+            Já tem conta?
+            <a href="#paralogin"> Ir para Login </a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+    </body>
+</html>
